@@ -2,7 +2,7 @@
 
 The `Linux-handbook.md` contains the raw markdown for my original book on freeCodeCamp.
 
-You can read the book for free here.
+## [You can read the book for free here](https://www.freecodecamp.org/news/learn-linux-for-beginners-book-basic-to-advanced/)
 
 ## Contributions are welcome 👋
 
