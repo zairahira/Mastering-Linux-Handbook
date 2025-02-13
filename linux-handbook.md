@@ -80,7 +80,11 @@ Important Note: All examples in this book are demonstrated in Ubuntu 22.04.2 LTS
         
     * [8.7. Linux Networking Basics](#heading-87-linux-networking-basics)
         
-    * [8.8. Linux Troubleshooting: Tools and Techniques](#heading-88-linux-troubleshooting-tools-and-techniques) [8.9. General Troubleshooting Strategy for Servers](#heading-89-general-troubleshooting-strategy-for-servers)
+    * [8.8. Linux Troubleshooting: Tools and Techniques](#heading-88-linux-troubleshooting-tools-and-techniques)
+        
+    * [8.9. General Troubleshooting Strategy for Servers](#heading-89-general-troubleshooting-strategy-for-servers)
+        
+    * [8.10 Diagnosing Hardware Problems](#heading-810-diagnosing-hardware-problems)
         
 * [Conclusion](#heading-conclusion)
     
@@ -194,7 +198,7 @@ In this section, you will learn how to install Ubuntu, which is one of the most 
     
 * **Step 2 – Create a bootable pendrive:** There are a number of softwares that can create a bootable pendrive. I recommend using Rufus, as it is quite easy to use. You can download it from [here](https://rufus.ie/).
     
-* **Step 3 – Boot from the pendrive:** Once your bootable pendrive is ready, insert it and boot from the pendrive. The boot menu depends on your laptop. You can google the boot menu for your laptop model.
+* **Step 3 – Boot from the pendrive:** Once your bootable pendrive is ready, insert it and boot from the pendrive. The boot menu depends on your laptop. You can google the boot menu for your laptop model.
     
 * **Step 4 – Follow the prompts.** Once, the boot process starts, select `try or install ubuntu`.
     
@@ -260,7 +264,6 @@ First, enable the Windows Subsystem for Linux option in settings.
     
     ![Running command prompt as an admin by right clicking the app and choosing "run as admin£](https://cdn.hashnode.com/res/hashnode/image/upload/v1720451480640/6052c9b4-cf07-47e0-ae89-18c3a2d3e385.png align="center")
     
-
 * Run the command below:
     
 
@@ -695,7 +698,7 @@ You can use the `rm` command to remove both files and non-empty directories.
 
 To copy files in Linux, use the `cp` command.
 
-* **Syntax to copy files:** `cp source_file destination_of_file`
+* **Syntax to copy files:**`cp source_file destination_of_file`
     
 
 This command copies a file named `file1.txt` to a new file location `/home/adam/logs`.
@@ -716,7 +719,7 @@ cp file1.txt file2.txt
 
 The `mv` command is used to move files and folders from one directory to the other.
 
-**Syntax to move files:** `mv source_file destination_directory`
+**Syntax to move files:**`mv source_file destination_directory`
 
 **Example:** Move a file named `file1.txt` to a directory named `backup`:
 
@@ -732,7 +735,7 @@ mv dir1/ backup/
 
 Renaming files and folders in Linux is also done with the `mv` command.
 
-**Syntax to rename files:** `mv old_name new_name`
+**Syntax to rename files:**`mv old_name new_name`
 
 **Example:** Rename a file from `file1.txt` to `file2.txt`:
 
@@ -1507,7 +1510,7 @@ echo -e "\n you path has the following files and folders: "
 ls $the_path
 ```
 
-Let's take a deeper look at the script line by line. I am displaying the same script again, but this time with line numbers.  
+Let's take a deeper look at the script line by line. I am displaying the same script again, but this time with line numbers.
 
 ```bash
   1 #!/bin/bash
@@ -1591,7 +1594,7 @@ In Bash, you can use and set the variable values in the following ways:
 country=Netherlands
 ```
 
-2\.  Assign the value based on the output obtained from a program or command, using command substitution. Note that `$` is required to access an existing variable's value.
+2\.  Assign the value based on the output obtained from a program or command, using command substitution. Note that `$` is required to access an existing variable's value.
 
 ```bash
 same_country=$country
@@ -1673,7 +1676,7 @@ echo -e "\nWelcome to bash tutorial" $entered_name
 
 ![Reading the name from a script](https://www.freecodecamp.org/news/content/images/2023/03/name-sh.gif align="left")
 
-2\.  Reading from a file
+2\.  Reading from a file
 
 This code reads each line from a file named `input.txt` and prints it to the terminal. We'll study while loops later in this section.
 
@@ -1684,7 +1687,7 @@ do
 done < input.txt
 ```
 
-3\.  Command line arguments
+3\.  Command line arguments
 
 In a bash script or function, `$1` denotes the initial argument passed, `$2` denotes the second argument passed, and so forth.
 
@@ -1714,7 +1717,7 @@ echo "Hello, World!"
 
 This prints the text "Hello, World!" to the terminal.
 
-2\.  Writing to a file:
+2\.  Writing to a file:
 
 ```bash
 echo "This is some text." > output.txt
@@ -1722,7 +1725,7 @@ echo "This is some text." > output.txt
 
 This writes the text "This is some text." to a file named `output.txt`. Note that the `>` operator overwrites a file if it already has some content.
 
-3\.  Appending to a file:
+3\.  Appending to a file:
 
 ```bash
 echo "More text." >> output.txt
@@ -1730,7 +1733,7 @@ echo "More text." >> output.txt
 
 This appends the text "More text." to the end of the file `output.txt`.
 
-4\.  Redirecting output:
+4\.  Redirecting output:
 
 ```bash
 ls > files.txt
@@ -1813,7 +1816,7 @@ while [[ $i -le 10 ]] ; do
 done
 ```
 
-![Looping from 1 to 10 using `while`](https://www.freecodecamp.org/news/content/images/2023/03/image-187.png align="left")
+![Looping from 1 to 10 using ](https://www.freecodecamp.org/news/content/images/2023/03/image-187.png align="left")
 
 **For loop**
 
@@ -1830,7 +1833,7 @@ do
 done
 ```
 
-![Looping from 1 to 10 using `for`](https://www.freecodecamp.org/news/content/images/2023/03/image-186.png align="left")
+![Looping from 1 to 10 using ](https://www.freecodecamp.org/news/content/images/2023/03/image-186.png align="left")
 
 **Case statements**
 
@@ -2013,7 +2016,7 @@ You can also right-click on a package and view further details like the dependen
 
 You may want to install a package you have downloaded from a website, rather than from a software repository. These packages are called `.deb` files.
 
-**Using** `dpkg` **to install packages:** `dpkg` is a command-line tool used to install packages. To install a package with **dpkg**, open the Terminal and type the following:
+**Using**`dpkg`**to install packages:**`dpkg` is a command-line tool used to install packages. To install a package with **dpkg**, open the Terminal and type the following:
 
 ```bash
 cd directory
@@ -2143,27 +2146,27 @@ Let's have a closer look into the `mode` column:
 
 ![Permission classes and file types](https://www.freecodecamp.org/news/content/images/2022/04/image-147.png align="left")
 
-**Mode** defines two things:
+**Mode** defines two things:
 
-* **File type:** File type defines the type of the file. For regular files that contain simple data it is blank `-`. For other special file types the symbol is different. For a directory which is a special file, it is `d`. Special files are treated differently by the OS.
+* **File type:** File type defines the type of the file. For regular files that contain simple data it is blank `-`. For other special file types the symbol is different. For a directory which is a special file, it is `d`. Special files are treated differently by the OS.
     
-* **Permission classes:** The next set of characters define the permissions for user, group, and others respectively.  
-    – **User**: This is the owner of a file and owner of the file belongs to this class.  
-    – **Group**: The members of the file’s group belong to this class  
-    – **Other**: Any users that are not part of the user or group classes belong to this class.
+* **Permission classes:** The next set of characters define the permissions for user, group, and others respectively.  
+    – **User**: This is the owner of a file and owner of the file belongs to this class.  
+    – **Group**: The members of the file’s group belong to this class  
+    – **Other**: Any users that are not part of the user or group classes belong to this class.
     
 
 💡**Tip:** Directory ownership can be viewed using the `ls -ld` command.
 
 ##### How to Read Symbolic Permissions or the `rwx` permissions
 
-The `rwx` representation is known as the Symbolic representation of permissions. In the set of permissions,
+The `rwx` representation is known as the Symbolic representation of permissions. In the set of permissions,
 
-* `r` stands for **read**. It is indicated in the first character of the triad.
+* `r` stands for **read**. It is indicated in the first character of the triad.
     
-* `w` stands for **write**. It is indicated in the second character of the triad.
+* `w` stands for **write**. It is indicated in the second character of the triad.
     
-* `x` stands for **execution**. It is indicated in the third character of the triad.
+* `x` stands for **execution**. It is indicated in the third character of the triad.
     
 
 **Read:**
@@ -2195,9 +2198,9 @@ For files, execute permissions allows the user to run an executable script. For 
 
 ##### How to Change File Permissions and Ownership in Linux using `chmod` and `chown`
 
-Now that we know the basics of ownerships and permissions, let's see how we can modify permissions using the `chmod` command.
+Now that we know the basics of ownerships and permissions, let's see how we can modify permissions using the `chmod` command.
 
-**Syntax of** `chmod`:
+**Syntax of**`chmod`:
 
 ```bash
 chmod permissions filename
@@ -2205,14 +2208,14 @@ chmod permissions filename
 
 Where,
 
-* `permissions` can be read, write, execute or a combination of them.
+* `permissions` can be read, write, execute or a combination of them.
     
-* `filename` is the name of the file for which the permissions need to change. This parameter can also be a list if files to change permissions in bulk.
+* `filename` is the name of the file for which the permissions need to change. This parameter can also be a list if files to change permissions in bulk.
     
 
 We can change permissions using two modes:
 
-1. **Symbolic mode**: this method uses symbols like `u`, `g`, `o` to represent users, groups, and others. Permissions are represented as  `r, w, x` for read, write, and execute, respectively. You can modify permissions using +, - and =.
+1. **Symbolic mode**: this method uses symbols like `u`, `g`, `o` to represent users, groups, and others. Permissions are represented as  `r, w, x` for read, write, and execute, respectively. You can modify permissions using +, - and =.
     
 2. **Absolute mode**: this method represents permissions as 3-digit octal numbers ranging from 0-7.
     
@@ -2239,7 +2242,7 @@ We can use mathematical operators to add, remove, and assign permissions. The ta
 
 **Example:**
 
-Suppose I have a script and I want to make it executable for the owner of the file `zaira`.
+Suppose I have a script and I want to make it executable for the owner of the file `zaira`.
 
 Current file permissions are as follows:
 
@@ -2257,17 +2260,17 @@ chmod u+x mymotd.sh
 
 **Output:**
 
-Now, we can see that the execution permissions have been added for owner `zaira`.
+Now, we can see that the execution permissions have been added for owner `zaira`.
 
 ![Permission updated](https://www.freecodecamp.org/news/content/images/2022/04/image-162.png align="left")
 
 **Additional examples for changing permissions via symbolic method:**
 
-* Removing `read` and `write` permission for `group` and `others`: `chmod go-rw`.
+* Removing `read` and `write` permission for `group` and `others`: `chmod go-rw`.
     
-* Removing `read` permissions for `others`: `chmod o-r`.
+* Removing `read` permissions for `others`: `chmod o-r`.
     
-* Assigning `write` permission to `group` and overriding existing permission: `chmod g=w`.
+* Assigning `write` permission to `group` and overriding existing permission: `chmod g=w`.
     
 
 ##### How to Change Permissions using Absolute Mode
@@ -2292,7 +2295,7 @@ Permissions can be revoked using subtraction. The below table shows how you can 
 
 **Example**:
 
-* Set `read` (add 4) for `user`, `read` (add 4) and `execute` (add 1) for group, and only `execute` (add 1) for others.
+* Set `read` (add 4) for `user`, `read` (add 4) and `execute` (add 1) for group, and only `execute` (add 1) for others.
     
 
 `chmod 451 file-name`
@@ -2301,41 +2304,41 @@ This is how we performed the calculation:
 
 ![Calculation breakdown for adding permissions](https://www.freecodecamp.org/news/content/images/2022/04/image-163.png align="left")
 
-Note that this is the same as `r--r-x--x`.
+Note that this is the same as `r--r-x--x`.
 
-* Remove `execution` rights from `other` and `group`.
+* Remove `execution` rights from `other` and `group`.
     
 
-To remove execution from `other` and `group`, subtract 1 from the execute part of last 2 octets.
+To remove execution from `other` and `group`, subtract 1 from the execute part of last 2 octets.
 
 ![Calculation breakdown for removing permissions](https://www.freecodecamp.org/news/content/images/2022/04/image-164.png align="left")
 
-* Assign `read`, `write` and `execute` to `user`, `read` and `execute` to `group` and only `read` to others.
+* Assign `read`, `write` and `execute` to `user`, `read` and `execute` to `group` and only `read` to others.
     
 
-This would be the same as `rwxr-xr--`.
+This would be the same as `rwxr-xr--`.
 
 ![Calculation breakdown for adding permissions](https://www.freecodecamp.org/news/content/images/2022/04/image-165.png align="left")
 
-##### How to Change Ownership using the `chown` Command
+##### How to Change Ownership using the `chown` Command
 
-Next, we will learn how to change the ownership of a file. You can change the ownership of a file or folder using the `chown` command. In some cases, changing ownership requires `sudo` permissions.
+Next, we will learn how to change the ownership of a file. You can change the ownership of a file or folder using the `chown` command. In some cases, changing ownership requires `sudo` permissions.
 
-Syntax of `chown`:
+Syntax of `chown`:
 
 ```bash
 chown user filename
 ```
 
-##### How to change user ownership with `chown`
+##### How to change user ownership with `chown`
 
-Let's transfer the ownership from user `zaira` to user `news`.
+Let's transfer the ownership from user `zaira` to user `news`.
 
 `chown news mymotd.sh`
 
 ![view current owner](https://www.freecodecamp.org/news/content/images/2022/04/image-167.png align="left")
 
-Command to change ownership: `sudo chown news mymotd.sh`.
+Command to change ownership: `sudo chown news mymotd.sh`.
 
 **Output:**
 
@@ -2343,7 +2346,7 @@ Command to change ownership: `sudo chown news mymotd.sh`.
 
 ##### How to change user and group ownership simultaneously
 
-We can also use `chown` to change user and group simultaneously.
+We can also use `chown` to change user and group simultaneously.
 
 ```bash
 chown user:group filename
@@ -2351,7 +2354,7 @@ chown user:group filename
 
 ##### How to change directory ownership
 
-You can change ownership recursively for contents in a directory. The example below changes the ownership of the `/opt/script` folder to allow user `admin`.
+You can change ownership recursively for contents in a directory. The example below changes the ownership of the `/opt/script` folder to allow user `admin`.
 
 ```bash
 chown -R admin /opt/script
@@ -2359,7 +2362,7 @@ chown -R admin /opt/script
 
 ##### How to change group ownership
 
-In case we only need to change the group owner, we can use `chown` by preceding the group name by a colon `:`
+In case we only need to change the group owner, we can use `chown` by preceding the group name by a colon `:`
 
 ```bash
 chown :admins /opt/script
@@ -2715,7 +2718,7 @@ grep -l "String to Match" /path/to/directory
 
 `sed` stands for "stream editor". It processes data stream-wise, meaning it reads data one line at a time. `sed` allows you to search for patterns and perform actions on the lines that match those patterns.
 
-**Basic syntax of** `sed`:
+**Basic syntax of**`sed`:
 
 The basic syntax of `sed` is as follows:
 
@@ -2725,7 +2728,7 @@ sed [options] 'command' file_name
 
 Here, `command` is used to perform operations like substitution, deletion, insertion, and so on, on the text data. The filename is the name of the file you want to process.
 
-`sed` **usage:**
+`sed`**usage:**
 
 **1\. Substitution:**
 
@@ -2781,7 +2784,7 @@ sed -n 's/^\([0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}\).*/\1/p' system.log
 
 `awk` has the ability to easily split each line into fields. It's well-suited for processing structured text like log files.
 
-**Basic syntax of** `awk`
+**Basic syntax of**`awk`
 
 The basic syntax of `awk` is:
 
@@ -2807,7 +2810,7 @@ In the coming examples, you'll use this log file as an example:
   INFO
 ```
 
-* **Accessing columns using** `awk`
+* **Accessing columns using**`awk`
     
 
 The fields in `awk` (separated by spaces by default) can be accessed using `$1`, `$2`, `$3`, and so on.
@@ -2937,7 +2940,7 @@ For example, the command below would extract the first field (separated by a spa
 cut -d ' ' -f 1 logfile.log
 ```
 
-**Examples of using** `cut` **for log parsing**
+**Examples of using**`cut`**for log parsing**
 
 Assume you have a log file structured as follows, where fields are space-separated:
 
@@ -2993,7 +2996,7 @@ ERROR
 
 This extracts the third field which contains the log level.
 
-4. **Combining** `cut` **with other commands:**
+4. **Combining**`cut`**with other commands:**
     
 
 The output of other commands can be piped to the `cut` command. Let's say you want to filter logs before cutting. You can use `grep` to extract lines containing "ERROR" and then use `cut` to get specific information from those lines:
@@ -3654,13 +3657,13 @@ In this section, we will look at an example of how to schedule a simple script w
 echo `date` >> date-out.txt
 ```
 
-2\.  Make the script executable by giving it execution rights.
+2\.  Make the script executable by giving it execution rights.
 
 ```bash
 chmod 775 date-script.sh
 ```
 
-3\.  Add the script in the crontab using `crontab -e`.
+3\.  Add the script in the crontab using `crontab -e`.
 
 Here, we have scheduled it to run per minute.
 
@@ -3668,7 +3671,7 @@ Here, we have scheduled it to run per minute.
 */1 * * * * /bin/sh /root/date-script.sh
 ```
 
-4\.  Check the output of the file `date-out.txt`. According to the script, the system date should be printed to this file every minute.
+4\.  Check the output of the file `date-out.txt`. According to the script, the system date should be printed to this file every minute.
 
 ```bash
 cat date-out.txt
@@ -3754,7 +3757,7 @@ These interfaces can be physical or virtual devices.
 
 To extract IPv4 and IPv6 addresses, you can use `ip -4 addr` and `ip -6 addr`, respectively.
 
-**View network activity with** `netstat`
+**View network activity with**`netstat`
 
 The `netstat` command shows network activity and stats by giving the following information:
 
@@ -4260,10 +4263,278 @@ sudo tcpdump -i any -w
 
 # Stop the command after a few mins as the file size may increase
 # use file extension as .pcap
-
 ```
 
 Once `tcpdump` is captured, you can use tools like Wireshark to visually analyze the traffic.
+
+## 8.10 **Diagnosing Hardware Problems**
+
+Troubleshooting unexpected issues is a part of the learning process. Sometimes, you may notice frequent segmentation faults (`SIGSEGV`), overheating, or random crashes across unrelated applications. The issue could either be software or hardware related. While software-related issues depend on the specific application itself, hardware issues can be diagnosed with some standard steps.
+
+In this section, we will discuss how to diagnose and rule out hardware issues related to memory, CPU, system sensors, power supply, and more.
+
+### **8.10.1 Analyzing Memory Performance**
+
+**Determine Available RAM**
+
+If you feel your system is getting slow and taking longer to finish tasks, check your system's available memory. This will ensure there is enough available memory including the swap memory.
+
+The command to check available memory is `free -mh`, where `-h` is for human-readable output and `-m` is for displaying memory in MB.
+
+```bash
+free -mh
+               total        used        free      shared  buff/cache   available
+Mem:            14Gi       5.1Gi       2.4Gi        77Mi       7.3Gi       9.3Gi
+Swap:          4.0Gi          0B       4.0Gi
+```
+
+In the above output, look at the "available" column in the "Mem" row. This shows how much RAM is free for use.
+
+Another way to check the memory in real time is to use the `top` command. There are 2 ways to do this:
+
+* When you are in `top`, press `Shift + M` to sort the processes by memory usage.
+    
+* Alternately, press `m` to see the memory usage in a progress bar like format:
+    
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1739275886121/f1695a67-13d6-4222-b71c-07176a52acb8.png align="center")
+
+If you see the memory consumed near to `100%`, you might want to consider identifying the process that is consuming the memory and take necessary action. You might also want to consider adding more memory to your system.
+
+**Run a stress test on your hardware**
+
+The `memtester` command is a utility used for diagnosing memory-related issues by stressing the memory and checking for faults. It is often used in situations where you suspect faulty RAM might be causing system instability or crashes.
+
+Here's how to use it effectively:
+
+* First, install `memtester`.
+    
+    ```bash
+    sudo apt install memtester
+    ```
+    
+* Determine the amount of RAM to test and the number of passes you’d like your RAM to go through. In the command below, `1G` is the amount of RAM to test (1 GB), and `5` is the number of test passes:
+    
+    ```bash
+    sudo memtester 1G 5
+    ```
+    
+
+If all tests pass, your RAM is likely error-free. If errors are reported, your RAM might be faulty and could require replacement or further inspection. You can always run the test again with a different amount of RAM or test passes.
+
+Note that, you shouldn't test too much memory at once, as your system also needs memory for running processes. If you have more RAM than can be tested at once, test in smaller segments sequentially.
+
+Below is a snippet of the `memtester` output if all tests pass. Notice the `”ok”` status for each test.
+
+```bash
+memtester version 4.5.1 (64-bit)
+Copyright (C) 2001-2020 Charles Cazabon.
+Licensed under the GNU General Public License version 2 (only).
+
+pagesize is 4096
+pagesizemask is 0xfffffffffffff000
+want 1024MB (1073741824 bytes)
+got  1024MB (1073741824 bytes), trying mlock ...locked.
+Loop 1/5:
+  Stuck Address       : ok
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok
+  Block Sequential    : ok
+  Checkerboard        : ok
+  Bit Spread          : ok
+  Bit Flip            : ok
+  Walking Ones        : ok
+  Walking Zeroes      : ok
+  8-bit Writes        : ok
+  16-bit Writes       : ok
+.
+.
+.
+```
+
+Below is a snippet of the output if a test fails. Notice the `FAILURE` status for each test.
+
+```bash
+memtester version 4.5.1 (64-bit)
+Copyright (C) 2001-2020 Charles Cazabon.
+Licensed under the GNU General Public License version 2 (only).
+
+pagesize is 4096
+pagesizemask is 0xfffffffffffff000
+want 1024MB (1073741824 bytes)
+got  1024MB (1073741824 bytes), trying mlock ...locked.
+Loop 1/5:
+  Stuck Address       : testing   1FAILURE: possible bad address line at offset 0x25378a58.
+Skipping to next test...
+  Random Value        : FAILURE: 0x4df704aaafdf8848 != 0x4df704aaafdfc848 at offset 0x05379a48.
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : testing   6FAILURE: 0x00000000 != 0x00004000 at offset 0x05379a48.
+  Block Sequential    : testing   3FAILURE: 0x303030303030303 != 0x303030303034303 at offset 0x05379a48.
+  Checkerboard        : testing   0FAILURE: 0xaaaaaaaaaaaaaaaa != 0xaaaaaaaaaaaaeaaa at offset 0x05379a48.
+  Bit Spread          : testing  12FAILURE: 0xffffffffffffafff != 0xffffffffffffefff at offset 0x05379a48.
+  Bit Flip            : testing   0FAILURE: 0x00000001 != 0x00004001 at offset 0x05379a48.
+  Walking Ones        : ok
+  Walking Zeroes      : testing   0FAILURE: 0x00000001 != 0x00001001 at offset 0x053af9f8.
+  8-bit Writes        : -FAILURE: 0x57c7c8ba7d6f5b3b != 0x57c7c8ba7d6f1b3b at offset 0x0537da28.
+  16-bit Writes       : -FAILURE: 0xd7768894fbf79099 != 0xd7768894fbf7d099 at offset 0x05379a48.
+FAILURE: 0xfffc5633ffefca5d != 0xfffc5633ffefda5d at offset 0x053a5a38.
+.
+.
+.
+```
+
+If errors persist across all test loops, it strongly suggests hardware issues, not transient software glitches.
+
+### **8.10.2 Identifying Overheating Issues**
+
+Overheating can cause unexpected errors and crashes. To diagnose overheating issues, you can use a command line utility `lm-sensors`.
+
+`lm-sensors` allow syou monitor hardware health by reading data from various sensors. It provides information about system temperatures, voltages, and fan speeds.
+
+Here's how you can identify and monitor your system temperature using `lm-sensors`:
+
+* First, install `lm-sensors`:
+    
+    ```bash
+    sudo apt install lm-sensors
+    ```
+    
+* Detect the available sensors on your system:
+    
+    ```bash
+    sudo sensors-detect
+    ```
+    
+    Follow the prompts and answer “YES” to detect the available sensors on your system.
+    
+* Once the available sensors are detected, you can view the temperature of your system using the `sensors` command:
+    
+    ```bash
+    sensors
+    ```
+    
+    In the output below, you can see the temperature reading at the edge of the GPU, which is 41.0 degrees Celsius. You can also see other pieces of information like voltage supplied, power consumption and voltage supplied.
+    
+    ```bash
+    amdgpu-pci-0400
+    Adapter: PCI adapter
+    vddgfx:      731.00 mV 
+    vddnb:       687.00 mV 
+    edge:         +41.0°C  
+    PPT:           7.00 W
+    ```
+    
+    Using `lm-sensors` ensures that the system is operating within safe parameters. It helps to detect potential hardware problems early and take corrective actions to prevent hardware damage.
+    
+
+### **8.10.3 Evaluating Hard Drive Health**
+
+Disk errors can also cause application crashes. To identify disk issues, you can run disk check using `smartmontools`:
+
+* First, install `smartmontools`:
+    
+    ```bash
+    sudo apt install smartmontools
+    ```
+    
+* Run a quick health check using the command below and replace `/dev/sdX` with your disk name (check with `lsblk`).
+    
+    ```bash
+    sudo smartctl -H /dev/sdX
+    ```
+    
+* Here is the result I got when I ran the command on my disk `/dev/nvme0n1`:
+    
+    ```bash
+    sudo smartctl -H /dev/nvme0n1
+    smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.0-52-generic] (local build)
+    Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+    
+    === START OF SMART DATA SECTION ===
+    SMART overall-health self-assessment test result: PASSED
+    ```
+    
+* You can also run a detailed test:
+    
+    ```bash
+    sudo smartctl -a /dev/nvme0n1
+    ```
+    
+
+The detailed test provides a full report, including:
+
+* Temperature
+    
+* Power-on hours
+    
+* Error counts
+    
+* Wear leveling (for SSDs), and more.
+    
+
+### **8.10.4 Conducting a CPU Stress Test**
+
+Faulty CPUs can also lead to a number of performance issues. To test your CPU, you can use the `stress-ng` utility:
+
+* Install `stress-ng`:
+    
+    ```bash
+    sudo apt install stress-ng
+    ```
+    
+* Run a CPU stress test:
+    
+    ```bash
+    stress-ng --cpu 4 --timeout 60
+    ```
+    
+
+In the above command, `4` is the number of CPU cores you’d like to test and `60` is the duration in seconds. The command will stress all 4 CPU cores for 60 seconds. Notice the CPU is at `100%` load during the test:
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1739277374316/9ab475c2-7f09-4c40-989b-e474e334935c.png align="center")
+
+If the system crashes during this test, the CPU may be faulty.
+
+### **8.10.5 Examining System Logs for Errors**
+
+`systemd` is a Linux system manager responsible for booting the system, managing system processes, and handling system services.
+
+`journalctl` is a command to query the `systemd` journal logs. It provides detailed logging for system processes, kernel events, user applications, and more.
+
+You can check system logs for hardware-related errors using the command: `journalctl -k | grep -iE "error|fault|panic"`.
+
+In the logs, look for messages about:
+
+* Memory faults.
+    
+* I/O errors.
+    
+* Hardware timeouts.
+    
+
+Here is what errors in the log file can look like:
+
+```bash
+Feb 11 10:15:32 hostname kernel: [Hardware Error]: CPU 0: Machine Check: 0 Bank 4: b200000000070f0f
+Feb 11 10:15:32 hostname kernel: [Hardware Error]: TSC 0 ADDR fef1c000 MISC 38a0000086 
+Feb 11 10:15:32 hostname kernel: [Hardware Error]: PROCESSOR 0:306a9 TIME 1613045732 SOCKET 0 APIC 0 microcode 1f
+Feb 11 10:16:45 hostname kernel: EXT4-fs error (device sda1): ext4_find_entry:1453: inode #2: comm ls: reading directory lblock 0
+Feb 11 10:17:12 hostname kernel: [drm:drm_atomic_helper_commit_cleanup_done [drm_kms_helper]] *ERROR* [CRTC:36:pipe A] flip_done timed out
+Feb 11 10:18:05 hostname kernel: Kernel panic - not syncing: Fatal exception
+```
 
 ### Conclusion
 
