@@ -1506,7 +1506,7 @@ echo "Today is " `date`
 echo -e "\nenter the path to directory"
 read the_path
 
-echo -e "\n you path has the following files and folders: "
+echo -e "\n your path has the following files and folders: "
 ls $the_path
 ```
 
@@ -1519,7 +1519,7 @@ Let's take a deeper look at the script line by line. I am displaying the same sc
   4 echo -e "\nenter the path to directory"
   5 read the_path
   6
-  7 echo -e "\n you path has the following files and folders: "
+  7 echo -e "\n your path has the following files and folders: "
   8 ls $the_path
 ```
 
